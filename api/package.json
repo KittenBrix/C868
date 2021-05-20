@@ -6,20 +6,10 @@
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
-    "start-dev": "nodemon -e js,json,html app.js",
-    "start-devtools": "nodemon --inspect -e js,json,html app.js",
-    "test": "mocha test/*.js",
-    "lint": "eslint --ignore-pattern app-api/apidoc .",
-    "apidoc": "apidoc -i app-api -o app-api/apidoc/apidoc",
-    "pretty": "prettier --write --arrow-parens avoid --trailing-comma none --single-quote --print-width 120 'src/**/*.ts'",
-    "check-pretty": "prettier --check --arrow-parens avoid --trailing-comma none --single-quote --print-width 120 'src/**/*.ts'",
-    "dupe": "jscpd -f '**/*.js' -e '**/node_modules/**'",
-    "spellcheck": "cspell '**/*.js'",
-    "compile": "npm run tsc && node -r dotenv/config ./dist/app.js dotenv_config_path=./.env",
-    "tsc": "tsc",
-    "build": "npm run tsc && cd .. && cd varsity-portal-api-dist && git pull && rm -rf * && cp -R ../varsity-portal-api/dist/* ../varsity-portal-api/assets ../varsity-portal-api/package.json ../varsity-portal-api/package-lock.json . && git add -A && git commit -m 'Chore; prod' && git push && echo 'Done - prod'",
-    "dev": "nodemon -e ts --exec \"npm run compile\""
+    "lint": "tslint --project tsconfig.json --format stylish",
+    "build": "tsc",
+    "serve": "ts-node src/server.ts",
+    "start": "nodemon"
   },
   "devDependencies": {
     "@types/http-status-codes": "^1.2.0",
@@ -47,6 +37,7 @@
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^4.24.0",
     "@typescript-eslint/parser": "^4.24.0",
+    "erlpack": "github:discord/erlpack",
     "eslint": "^7.26.0"
   }
 }
