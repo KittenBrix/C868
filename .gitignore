@@ -1,0 +1,13 @@
+node_modules
+xmls/
+zips/
+pdfs/
+reports/
+.env
+.DS_Store
+.eslintrc.json
+report_images/
+.vscode/ 
+.idea/
+temp/*
+dist/*
