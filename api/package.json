@@ -19,6 +19,17 @@
     "@types/node": "^15.3.1",
     "http-status-codes": "^2.1.4",
     "koa": "^2.13.1",
+    "koa-body": "~2.6.0",
+    "koa-bunyan": "~1.0.0",
+    "koa-compose": "~3.2.1",
+    "koa-compress": "~2.0.0",
+    "koa-flash": "~1.0.0",
+    "koa-handlebars": "~2.0.0",
+    "koa-lusca": "~2.2.0",
+    "koa-send": "~4.1.3",
+    "koa-session": "~4.0.1",
+    "koa-static": "~3.0.0",
+    "koa2-cors": "~2.0.6",
     "koa-bodyparser": "^4.3.0",
     "koa-router": "^10.0.0",
     "nodemon": "^2.0.7",
@@ -35,9 +46,15 @@
     "node": "~8.9.4"
   },
   "dependencies": {
+    "@types/better-sqlite3": "^5.4.1",
     "@typescript-eslint/eslint-plugin": "^4.24.0",
     "@typescript-eslint/parser": "^4.24.0",
+    "better-sqlite3": "^7.4.0",
+    "dotenv": "^9.0.2",
     "erlpack": "github:discord/erlpack",
-    "eslint": "^7.26.0"
+    "eslint": "^7.26.0",
+    "mysql2": "^2.2.5",
+    "sqlite": "^4.0.22",
+    "sqlite3": "^5.0.2"
   }
 }
